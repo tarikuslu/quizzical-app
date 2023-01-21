@@ -40,8 +40,21 @@ label {
     border-radius: .5em;
     border: 1px solid #4D5B9E;
 }
+
+.white-bg {
+    background-color: transparent;
+}
+
+.true {
+    background-color: #94D7A2 !important;
+}
+
+.false {
+    background-color: #F8BCBC !important;
+}
+
 input:checked + label {
-    background-color: #D6DBF5;
+    background-color: #D6DBF5 ; 
     border: none;
 }
 
@@ -51,5 +64,4 @@ input:checked + label {
         
         margin: 1em;
     }
-
 }

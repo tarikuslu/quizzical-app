@@ -75,18 +75,18 @@ export default function Questions() {
     if (event.target.textContent === "Check Answers") {
       formQuestions.forEach((element) => {
         if (element.checked === element.correct_answer) {
-          document.getElementById(
-            element.checked + element.id
-          ).style.backgroundColor = "#94D7A2";
+          document
+            .getElementById(element.checked + element.id)
+            .classList.add("true");
           correctCounter++;
         } else {
-          document.getElementById(
-            element.checked + element.id
-          ).style.backgroundColor = "#F8BCBC";
+          document
+            .getElementById(element.checked + element.id)
+            .classList.add("false");
 
-          document.getElementById(
-            element.correct_answer + element.id
-          ).style.backgroundColor = "#94D7A2";
+          document
+            .getElementById(element.correct_answer + element.id)
+            .classList.add("true");
           falseCounter++;
         }
         setTestOverall((prev) => (
@@ -103,13 +103,13 @@ export default function Questions() {
       setTestFinished((prev) => !prev);
       fetchRequest();
       document.querySelectorAll("label").forEach((element) => {
-        element.style.backgroundColor = "transparent";
+        element.classList.remove("true");
+        element.classList.remove("false");
       });
     }
   }
 
   function chooseAnswer(event, id) {
-    event.target.nextElementSibling.style.backgroundColor = "#D6DBF5";
     setFormQuestions((prevForm) =>
       prevForm.map((prev) => {
         return prev.id === id ? { ...prev, checked: event.target.value } : prev;
