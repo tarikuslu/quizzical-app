@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btn-container {
+    align-self: center;
+}
+
+.overall {
+    display: inline-block;
+    margin-right: 1em;
+    color: #293264;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
